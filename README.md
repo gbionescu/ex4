@@ -11,8 +11,11 @@ Steps to reproduce:
 
 1. Start an alpine container: `docker run -it --rm alpine /bin/sh`.
 2. Fetch `swtpm` according to instructions here: https://github.com/stefanberger/swtpm/wiki
+
     2.1. First, build `libtpms`: as shown here: https://github.com/stefanberger/libtpms/wiki
+
     2.2. Build `swtpm`.
+ 
     2.3. (Optional) openssl might have to be rebuilt in order to successfully execute step `2.2` since the `AES_set_encrypt_key` symbol is not built-in. 
 See the package definition here: https://git.alpinelinux.org/aports/tree/main/openssl
 Using the upstream package definition I managed to rebuild a package that contains `AES_set_encrypt_key` without any changes.
