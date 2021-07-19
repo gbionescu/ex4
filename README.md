@@ -70,7 +70,7 @@ which could be caused by the fact that I was running everything in the Alpine co
 
 2. On the opensuse machine, install `swtpm` and `libtpm` as instructed here: https://software.opensuse.org//download.html?project=security&package=swtpm
 
-3. Create a VM with TPM built-in the kernel - I used Ubuntu Server 21.04.
+3. Create a VM with TPM built-in the kernel - I used Ubuntu Server 20.04.
 
 4. Create an XML file with the following content:
 ```XML
