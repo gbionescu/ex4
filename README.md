@@ -72,7 +72,9 @@ which could be caused by the fact that I was running everything in the Alpine co
 
 3. Create a VM with TPM built-in the kernel - I used Ubuntu Server 20.04.
 
-4. Create an XML file with the following content:
+4. Install `qemu` and `libvirt`.
+
+5. Create an XML file with the following content:
 ```XML
 <domain type='qemu'>
   <name>linux2020</name>
@@ -236,11 +238,11 @@ Notes:
     </tpm>
 ```
 
-5. Run `virsh create step4.xml`.
+6. Run `virsh create step4.xml`.
 
-6. Switch to the VM console using either `virsh console` or `virt-manager`.
+7. Switch to the VM console using either `virsh console` or `virt-manager`.
 
-7. Log in to the VM and run: 
+8. Log in to the VM and run: 
 
 ```bash
 sudo strings /sys/kernel/security/tpm0/binary_bios_measurements
@@ -248,6 +250,6 @@ sudo strings /sys/kernel/security/tpm0/binary_bios_measurements
 
 If `strings` is not installed, `cat` works too.
 
-8. Video of a VM booting with TPM measurement enabled here: https://www.youtube.com/watch?v=qxpdt01T0x0. 
+9. Video of a VM booting with TPM measurement enabled here: https://www.youtube.com/watch?v=qxpdt01T0x0. 
 
 Timestamp of the `binary_bios_measurements` output here: https://youtu.be/qxpdt01T0x0?t=123
