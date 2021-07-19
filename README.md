@@ -17,7 +17,8 @@ Steps to reproduce:
     2.2. Build `swtpm`.
  
     2.3. (Optional) openssl might have to be rebuilt in order to successfully execute step `2.2` since the `AES_set_encrypt_key` symbol is not built-in. 
-See the package definition here: https://git.alpinelinux.org/aports/tree/main/openssl
+Rebuilding the package can be done by using the definition here: https://git.alpinelinux.org/aports/tree/main/openssl.
+
 Using the upstream package definition I managed to rebuild a package that contains `AES_set_encrypt_key` without any changes.
 
 Instructions on how to build any alpine package can be found here: https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package
