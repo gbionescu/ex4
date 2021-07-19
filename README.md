@@ -12,7 +12,7 @@ Steps to reproduce:
 1. Start an alpine container: `docker run -it --rm alpine /bin/sh`.
 2. Fetch `swtpm` according to instructions here: https://github.com/stefanberger/swtpm/wiki
 
-    2.1. First, build `libtpms`: as shown here: https://github.com/stefanberger/libtpms/wiki
+    2.1. First, build `libtpms` as shown here: https://github.com/stefanberger/libtpms/wiki
 
     2.2. Build `swtpm`.
  
